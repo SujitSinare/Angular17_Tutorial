@@ -3,22 +3,32 @@ import { TemplateFormValidationComponent } from './topics/template-form-validati
 import { ReactiveFormValidationComponent } from './topics/reactive-form-validation/reactive-form-validation.component';
 import { ControlFlowComponent } from './topics/control-flow/control-flow.component';
 import { PipesComponent } from './topics/pipes/pipes.component';
+import { SignalComponent } from './topics/signal/signal.component';
 
 export const routes: Routes = [
     {
-        path:'templateFormValidation',
-        component:TemplateFormValidationComponent
+        path: '',
+        redirectTo: 'templateFormValidation',
+        pathMatch: 'full'
     },
     {
-        path:'reactiveFormValidation',
-        component:ReactiveFormValidationComponent
+        path: 'templateFormValidation',
+        component: TemplateFormValidationComponent
     },
     {
-        path:'control-flow',
-        component:ControlFlowComponent
+        path: 'reactiveFormValidation',
+        component: ReactiveFormValidationComponent
     },
     {
-        path:'pipes',
-        component:PipesComponent
+        path: 'control-flow',
+        component: ControlFlowComponent
+    },
+    {
+        path: 'pipes',
+        component: PipesComponent
+    },
+    {
+        path: 'signal',
+        component: SignalComponent
     }
 ];
