@@ -4,6 +4,7 @@ import { ReactiveFormValidationComponent } from './topics/reactive-form-validati
 import { ControlFlowComponent } from './topics/control-flow/control-flow.component';
 import { PipesComponent } from './topics/pipes/pipes.component';
 import { SignalComponent } from './topics/signal/signal.component';
+import { ParentComponent } from './topics/component-communication/parent/parent.component';
 
 export const routes: Routes = [
     {
@@ -30,5 +31,9 @@ export const routes: Routes = [
     {
         path: 'signal',
         component: SignalComponent
+    },
+    {
+        path: 'communication',
+        component: ParentComponent
     }
 ];
