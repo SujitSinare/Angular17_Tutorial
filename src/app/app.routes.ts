@@ -5,6 +5,7 @@ import { ControlFlowComponent } from './topics/control-flow/control-flow.compone
 import { PipesComponent } from './topics/pipes/pipes.component';
 import { SignalComponent } from './topics/signal/signal.component';
 import { ParentComponent } from './topics/component-communication/parent/parent.component';
+import { AnimationComponent } from './topics/animation/animation.component';
 
 export const routes: Routes = [
     {
@@ -35,5 +36,9 @@ export const routes: Routes = [
     {
         path: 'communication',
         component: ParentComponent
+    },
+    {
+        path: 'animation',
+        component: AnimationComponent
     }
 ];
