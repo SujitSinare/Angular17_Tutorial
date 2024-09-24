@@ -6,6 +6,7 @@ import { PipesComponent } from './topics/pipes/pipes.component';
 import { SignalComponent } from './topics/signal/signal.component';
 import { ParentComponent } from './topics/component-communication/parent/parent.component';
 import { AnimationComponent } from './topics/animation/animation.component';
+import { LazyLoadingComponent } from './topics/lazy-loading/lazy-loading.component';
 
 export const routes: Routes = [
     {
@@ -40,5 +41,9 @@ export const routes: Routes = [
     {
         path: 'animation',
         component: AnimationComponent
+    },
+    {
+        path: 'lazy-loading',
+        loadChildren: () => import('./topics/lazy-loading/lazy.module').then(m => m.LazyModule)
     }
 ];
