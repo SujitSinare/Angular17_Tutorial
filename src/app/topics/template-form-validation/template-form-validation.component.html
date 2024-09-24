@@ -5,7 +5,7 @@
 <form class="row g-3 needs-validation" novalidate #userForm="ngForm">
     <div class="col-md-6">
       <label for="validationCustom01" class="form-label">First name <span class="text-danger">*</span></label>
-      <input type="text" name="firstName" #firstName="ngModel" [(ngModel)]="userObj.firstName" class="form-control" minlength="2" required>
+      <input class="form-control" type="text" name="firstName" #firstName="ngModel" [(ngModel)]="userObj.firstName" class="form-control" minlength="2" required>
       <div class="text-danger" *ngIf="firstName.invalid && (firstName.touched || firstName.dirty) || isFormSubmited" > 
         <span *ngIf="firstName.errors?.['required']">First name is required.</span>
         <span *ngIf="firstName.errors?.['minlength']">Min 2 characters needed.</span> 
@@ -13,13 +13,13 @@
     </div>
     <div class="col-md-6">
       <label for="validationCustom02" class="form-label">Last name</label>
-      <input type="text" name="lastName" [(ngModel)]="userObj.lastName" class="form-control" id="validationCustom02"      >
+      <input class="form-control" type="text" name="lastName" [(ngModel)]="userObj.lastName" class="form-control" id="validationCustom02"      >
     </div>
     <div class="col-md-6">
       <label for="validationCustomUsername" class="form-label">Email <span class="text-danger">*</span></label>
       <div class="input-group has-validation">
         <span class="input-group-text" id="inputGroupPrepend">&#64;</span>
-        <input type="text"  name="userName" #email="ngModel" [(ngModel)]="userObj.userName" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" class="form-control"  required>
+        <input class="form-control" type="text"  name="userName" #email="ngModel" [(ngModel)]="userObj.userName" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" class="form-control"  required>
       </div>
       <div class="text-danger" *ngIf="email.invalid && (email.touched || email.dirty) || isFormSubmited">
         <span *ngIf="email.errors?.['required']">Email is required.</span>
@@ -28,7 +28,7 @@
     </div>
     <div class="col-md-6">
       <label for="validationCustom03" class="form-label">City</label>
-      <input type="text" name="city" [(ngModel)]="userObj.city"   class="form-control" id="validationCustom03"  > 
+      <input class="form-control" type="text" name="city" [(ngModel)]="userObj.city"   class="form-control" id="validationCustom03"  > 
       </div>
     <div class="col-md-6">
       <label for="validationCustom04" class="form-label">State</label>
@@ -41,12 +41,12 @@
     </div>
     <div class="col-md-6">
       <label for="validationCustom05" class="form-label">Zip</label>
-      <input type="text" name="zipcode" [(ngModel)]="userObj.zipcode" class="form-control" id="validationCustom05"  >
+      <input class="form-control" type="text" name="zipcode" [(ngModel)]="userObj.zipcode" class="form-control" id="validationCustom05"  >
      
     </div>
     <div class="col-12">
       <div class="form-check">
-        <input class="form-check-input" name="isAggree" [(ngModel)]="userObj.isAggree" type="checkbox" value="" id="invalidCheck"  >
+        <input class="form-control" class="form-check-input" name="isAggree" [(ngModel)]="userObj.isAggree" type="checkbox" value="" id="invalidCheck"  >
         <label class="form-check-label" for="invalidCheck">
           Agree to terms and conditions
         </label>
