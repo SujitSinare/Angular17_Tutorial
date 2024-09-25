@@ -9,6 +9,7 @@ import { AnimationComponent } from './topics/animation/animation.component';
 import { LazyLoadingComponent } from './topics/lazy-loading/lazy-loading.component';
 import { DeferredLoadingComponent } from './topics/deferred-loading/deferred-loading.component';
 import { HttpImplementationComponent } from './topics/http-implementation/http-implementation.component';
+import { ImageOptimizationComponent } from './topics/image-optimization/image-optimization.component';
 
 export const routes: Routes = [
     {
@@ -55,5 +56,9 @@ export const routes: Routes = [
     {
         path: 'http-implementation',
         component: HttpImplementationComponent
+    },
+    {
+        path: 'image-optimization',
+        component: ImageOptimizationComponent
     }
 ];
